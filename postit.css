@@ -154,19 +154,23 @@ body {
     transform: translateX(1rem);
   }
 }
+.credits {
+  color: #fff;
+}
 i {
-  height: 1rem;
+  clip-path: polygon(36% 27%, 100% 0, 100% 100%, 36% 76%, 0 62%, 0 44%);
+  height: 2rem;
   margin-left: 1rem;
   width: 10rem;
   font-size: 1rem;
   box-shadow: inset 30px 0px 30px -30px transparent;
   transition: all 0.75s ease-in;
-  border-left: 1px solid #111;
+  border-left: 2px solid #fff;
 }
 span {
   margin-left: -10.6rem;
   width: 0rem;
-  height: 5rem;
+  height: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,10 +191,11 @@ strong {
   width: 14rem;
 }
 .credits:hover i {
-  font-size: 2rem;
-  height: 3rem;
+  font-size: 1rem;
+  height: 10rem;
   transition: all 1s ease-in;
   box-shadow: inset 30px 0px 30px -30px greenyellow;
+  margin-top: -0.5rem;
 }
 .credits:hover:after {
   margin-left: 0.5rem;
