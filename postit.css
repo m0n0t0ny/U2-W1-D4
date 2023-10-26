@@ -135,30 +135,63 @@ body {
   position: absolute;
   bottom: 1rem;
 }
+.credits:after {
+  margin-left: 1rem;
+  content: "◀";
+  animation: point 1s infinite alternate ease-in-out;
+  transition: all 0.25s ease-in;
+}
+@keyframes point {
+  0% {
+    color: cyan;
+    transform: translateX(0rem);
+  }
+  50% {
+    color: magenta;
+  }
+  100% {
+    color: yellow;
+    transform: translateX(1rem);
+  }
+}
 i {
-  width: 2px;
-  font-size: 2rem;
-  box-shadow: 15px 0px 5px transparent;
-  transition: all 0.25s ease-in-out;
+  height: 1rem;
+  margin-left: 1rem;
+  width: 10rem;
+  font-size: 1rem;
+  box-shadow: inset 30px 0px 30px -30px transparent;
+  transition: all 0.75s ease-in;
+  border-left: 1px solid #111;
 }
 span {
-  width: 15rem;
-  height: 2rem;
+  margin-left: -10.6rem;
+  width: 0rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   transform: translateX(0.6rem);
+  transition: all 1s ease-in-out;
 }
 strong {
+  font-size: 0;
   transform: translateX(-12rem);
-  transition: 0.25s ease-in-out;
+  transition: 1s ease-in-out;
 }
 .credits:hover strong {
-  scale: 1.5;
-  animation-name: showcredits;
-  animation-duration: 0.25s;
-  animation-direction: alternate;
   transform: translateX(0);
-  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+.credits:hover span {
+  width: 14rem;
+}
+.credits:hover i {
+  font-size: 2rem;
+  height: 3rem;
+  transition: all 1s ease-in;
+  box-shadow: inset 30px 0px 30px -30px greenyellow;
+}
+.credits:hover:after {
+  margin-left: 0.5rem;
 }
